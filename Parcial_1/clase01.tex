@@ -1,0 +1,262 @@
+% Created 2026-04-02 Thu 09:24
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{David Jácome}
+\date{\today}
+\title{Probabilidad y Estadística-Clase 01}
+\hypersetup{
+ pdfauthor={David Jácome},
+ pdftitle={Probabilidad y Estadística-Clase 01},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.6.15)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Sílabo}
+\label{sec:orge993f0e}
+\subsection{Primer Parcial}
+\label{sec:orga9bfa66}
+\begin{enumerate}
+\item Estadística descriptiva
+\item Probabilidad
+\end{enumerate}
+\subsection{Segundo Parcial}
+\label{sec:orgc8588ab}
+\begin{enumerate}
+\item Probabilidad (parte 2)
+\item Variables aleatorias
+\item Distribuciones especiales
+\item Distribuciones de muestreo (TLC)
+\item Intervalos de confianza
+\end{enumerate}
+
+\section{Estadística Descriptiva}
+\label{sec:orgc09a1a2}
+\subsection{Variable}
+\label{sec:org561a64b}
+\begin{itemize}
+\item Puede ser cualquier letra mayúscula.
+\item Es una característica de estudio.
+\end{itemize}
+
+\subsection{Conceptos Básicos}
+\label{sec:orgd4cfbe8}
+\begin{itemize}
+\item \textbf{Población (\(N\)):} El conjunto total de datos.
+\item \textbf{Muestra (\(n\)):} Un subconjunto de la población.
+\item \textbf{Individuo:} Cada elemento o dato individual.
+\end{itemize}
+
+\begin{quote}
+"Cada individuo es un dato."
+\end{quote}
+
+\subsection{Frecuencia}
+\label{sec:orgb49ffc1}
+La frecuencia se divide principalmente en dos tipos:
+
+\begin{enumerate}
+\item \textbf{Absoluta (\(F_i, n_i\)):} Consiste en contar los datos.
+\begin{itemize}
+\item \(n \to\) Muestra
+\item \(N \to\) Población
+\end{itemize}
+\item \textbf{Relativa (\(F_{ri}, f_i\)):} Es una proporción o probabilidad.
+$$\displaystyle f_{ri} = \frac{f_i}{n}$$
+Donde \(n\) es el número total de datos.
+\end{enumerate}
+
+\subsection{Presentación de Datos}
+\label{sec:org6b37bc0}
+Existen tres formas principales de presentar la información:
+\begin{enumerate}
+\item \textbf{Individual}
+\item \textbf{Agrupadas:}
+\begin{itemize}
+\item Simples
+\item Intervalos de clase (con tablas de frecuencia)
+\end{itemize}
+\item \textbf{Gráfica}
+\end{enumerate}
+
+\subsection{1. Individuales}
+\label{sec:orgc4e9a88}
+\(x_1, x_2, x_3, x_4, x_5, x_6, x_7, \dots, x_{final}\)
+
+\subsection{2. Tablas de Frecuencia}
+\label{sec:orgc2245f1}
+\(i\): Interés
+
+\subsubsection{Tabla de agrupado simple}
+\label{sec:org302b0e6}
+\begin{center}
+\begin{tabular}{rlll}
+\(i\) & \(x_i\) & \(f_i\) & \(f_{ri}\)\\[0pt]
+\hline
+1 & \(x_1\) & \(f_1\) & \(f_{r1}\)\\[0pt]
+2 & \(x_2\) & \(f_2\) & \(f_{r2}\)\\[0pt]
+3 & \(x_3\) & \(f_3\) & \(f_{r3}\)\\[0pt]
+4 & \(x_4\) & \(f_4\) & \(f_{r4}\)\\[0pt]
+5 & \(x_5\) & \(f_5\) & \(f_{r5}\)\\[0pt]
+\(\dots\) & \(\dots\) & \(\dots\) & \(\dots\)\\[0pt]
+\(n\) & \(x_n\) & \(f_k\) & \(f_{rk}\)\\[0pt]
+\end{tabular}
+\end{center}
+
+\subsubsection{Tabla por intervalos de clase}
+\label{sec:orgb146d11}
+\begin{center}
+\begin{tabular}{rlllll}
+\(i\) & \(L_i\) & \(L_{i+1} = L_s\) & \(m_i\) & \(f_i\) & \(f_{ri}\)\\[0pt]
+\hline
+1 & \(L_1\) & \(L_2\) & \(m_1\) & \(f_1\) & \(f_{r1}\)\\[0pt]
+2 & \(L_2\) & \(L_3\) & \(m_2\) & \(f_2\) & \(f_{r2}\)\\[0pt]
+3 & \(L_3\) & \(L_4\) & \(m_3\) & \(f_3\) & \(f_{r3}\)\\[0pt]
+4 & \(L_4\) & \(L_5\) & \(m_4\) & \(f_4\) & \(f_{r4}\)\\[0pt]
+\(\dots\) & \(\dots\) & \(\dots\) & \(\dots\) & \(\dots\) & \(\dots\)\\[0pt]
+\(k\) & \(L_k\) & \(L_{k+1}\) & \(m_k\) & \(f_k\) & \(f_{rk}\)\\[0pt]
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item \(L_i\): Límite inferior.
+\item \(L_s\): Límite superior.
+\item \textbf{Punto medio o marca de clase (\(m_i\)):} $$\displaystyle m_i = \frac{L_i + L_s}{2}$$
+\end{itemize}
+
+\section{Medidas Descriptivas}
+\label{sec:org22e6d95}
+\subsection{Medidas de tendencia central}
+\label{sec:org95309da}
+\begin{itemize}
+\item \textbf{Media aritmética / Promedio / Esperanza} (\(\bar{x}\) o \(\mu\))
+\item \textbf{Moda} (\(M_o\))
+\item \textbf{Mediana / Percentil 50} (\(M_e\))
+\end{itemize}
+
+\subsection{Cálculo de la Media (\(\bar{x}\))}
+\label{sec:org2e47109}
+
+\subsubsection{Caso Individual}
+\label{sec:orgca7114b}
+$$\displaystyle \bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$
+
+\subsubsection{Tablas de Frecuencia}
+\label{sec:org78f411d}
+Para datos organizados en tablas, tenemos dos formas:
+
+\begin{enumerate}
+\item Agrupados simples
+\label{sec:org3857200}
+\begin{itemize}
+\item \textbf{Forma 1:}
+$$\displaystyle \bar{x} = \frac{\sum_{i=1}^{k} x_i \cdot f_i}{n}$$
+\item \textbf{Forma 2:}
+$$\displaystyle \bar{x} = \sum_{i=1}^{k} x_i \cdot f_{ri}$$
+\end{itemize}
+
+\item Intervalos de clase
+\label{sec:org76aa100}
+Se utiliza la marca de clase (\(m_i\)):
+$$\displaystyle \bar{x} = \frac{\sum_{i=1}^{n} m_i \cdot f_i}{n} = \sum_{i=1}^{n} m_i \cdot f_{ri}$$
+\end{enumerate}
+
+\subsection{Moda (\(M_o\))}
+\label{sec:org37db3ed}
+\begin{itemize}
+\item Es el dato que más se repite.
+\item Es el dato con mayor frecuencia (absoluta o relativa).
+\item \textbf{Intervalo modal:} En tablas de intervalos, es el intervalo con mayor frecuencia.
+\end{itemize}
+
+\subsection{Mediana (\(M_e\)): Cálculo de Percentil 50}
+\label{sec:org1ff2e72}
+\begin{IMPORTANT}
+Los datos \textbf{deben estar ordenados} de menor a mayor.
+\end{IMPORTANT}
+
+\subsubsection{Caso Individual}
+\label{sec:orgd76eaf5}
+\begin{itemize}
+\item \textbf{Si el \# de datos es par:} Es el promedio de los dos valores centrales.
+\item \textbf{Si el \# de datos es impar:} Es el valor que se encuentra justo en medio (la mitad).
+\end{itemize}
+
+
+\section{Medidas de Dispersión}
+\label{sec:org99c1bcd}
+\subsection{Conceptos y Símbolos}
+\label{sec:org99ae5c1}
+\begin{center}
+\begin{tabular}{lll}
+Medida & Muestra & Población\\[0pt]
+\hline
+Varianza & \(s^2\) & \(\sigma^2\)\\[0pt]
+Desviación Estándar & \(s\) & \(\sigma\)\\[0pt]
+\end{tabular}
+\end{center}
+
+\begin{quote}
+Relación fundamental:
+\(\sqrt{Varianza} = Desviación\)
+\((Desviación)^2 = Varianza\)
+\end{quote}
+
+\subsection{Varianza Muestral (\(s^2\))}
+\label{sec:org23ab1ae}
+\subsubsection{Caso Individual}
+\label{sec:org41f5fe5}
+$$\displaystyle s^2 = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n - 1}$$
+
+\subsubsection{Tablas de Frecuencia}
+\label{sec:org1bc72ba}
+\begin{itemize}
+\item \textbf{Agrupados simples:}
+$$\displaystyle s^2 = \frac{\sum_{i=1}^{k} (x_i - \bar{x})^2 \cdot f_i}{n - 1}$$
+\item \textbf{Intervalos de clase:} (se usa la marca de clase \(m_i\))
+$$\displaystyle s^2 = \frac{\sum_{i=1}^{k} (m_i - \bar{x})^2 \cdot f_i}{n - 1}$$
+\end{itemize}
+
+\subsection{Rango e Intervalo Intercuartil}
+\label{sec:org3d44cf2}
+\begin{itemize}
+\item \textbf{Rango:}
+$$\displaystyle R = X_{max} - X_{min}$$
+\emph{(Los datos deben estar ordenados de menor a mayor)}
+\item \textbf{Rango Intercuartil (\(RIQ\)):}
+$$\displaystyle RIQ = Q_3 - Q_1$$
+\begin{itemize}
+\item \(Q_1\): Percentil 25 (\(P_{25}\))
+\item \(Q_3\): Percentil 75 (\(P_{75}\))
+\end{itemize}
+\end{itemize}
+
+\subsection{Coeficiente de Variación (\(CV\))}
+\label{sec:org7c247d6}
+Determina qué tan homogéneos o heterogéneos son los datos:
+$$\displaystyle CV = \frac{s}{\bar{x}}$$
+
+\begin{itemize}
+\item \textbf{Interpretación:}
+\begin{itemize}
+\item Si \(CV > 0.2 \implies\) Datos \textbf{Heterogéneos}.
+\item Si \(CV < 0.2 \implies\) Datos \textbf{Homogéneos}.
+\end{itemize}
+\end{itemize}
+\end{document}
